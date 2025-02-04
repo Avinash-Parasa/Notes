@@ -128,6 +128,19 @@ function NoteItem({ note, updateNote, nothing, what, toggleFavourite }) {
               >
                 {descriptionText}
               </div>
+              <div className="modal-body">
+                {note.image ? (
+                  <div className="relative w-full h-40 overflow-hidden rounded-md border border-gray-300">
+                    <img
+                      src={note.image}
+                      alt="Current Note"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <p>No image uploaded</p>
+                )}
+              </div>
               <div className="modal-footer bg-light">
                 <button
                   type="button"
